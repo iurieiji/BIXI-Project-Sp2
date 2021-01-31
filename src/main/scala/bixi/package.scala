@@ -1,8 +1,4 @@
-import io.circe.generic.extras.Configuration
-
 package object bixi {
-
-  implicit val config = Configuration.default.withSnakeCaseMemberNames
 
   final implicit class PipeAndTap[A](private val a: A) extends AnyVal {
     @inline final def pipe[B](ab: A => B): B = ab(a)
